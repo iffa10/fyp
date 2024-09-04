@@ -49,17 +49,23 @@ public class Score : MonoBehaviour
         // Update the score based on the item collected
         if (other.tag == "Coins")
         {
-            AddScore(200);
+            AddScore(100);
             Destroy(other.gameObject);
             PlayCollectSound();
         }
         else if (other.tag == "Crystals")
         {
-            AddScore(300);
+            AddScore(200);
             Destroy(other.gameObject);
             PlayCollectSound();
         }
         else if (other.tag == "waterOrb")
+        {
+            AddScore(300);
+            Destroy(other.gameObject);
+            PlayCollectSound();
+        }
+        else if (other.tag == "fireOrb")
         {
             AddScore(400);
             Destroy(other.gameObject);
